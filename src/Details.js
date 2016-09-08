@@ -17,7 +17,7 @@ class Details extends Component
 
 	async getProject(project)
 	{
-		var uri 			= 'https://api.github.com/repos/globocom/'+project+'?client_id=20eb65ae4aacca8a9262&client_secret=b191d329132554efb055148f0b9c0c0814fbdeb9';
+		var uri 			= 'https://api.github.com/repos/globocom/'+project;
 		let response 		= await fetch(uri);
 		let responseJson  	= await response.json();
 		this.setState({ details: responseJson });
@@ -29,7 +29,7 @@ class Details extends Component
 
 	async getCommits(username, project, page)
 	{
-		var uri 			= 'https://api.github.com/repos/'+username+'/'+project+'/commits?client_id=20eb65ae4aacca8a9262&client_secret=b191d329132554efb055148f0b9c0c0814fbdeb9';
+		var uri 			= 'https://api.github.com/repos/'+username+'/'+project+'/commits';
 		let response 		= await fetch( uri, {"sort":"newest", "order":"desc", "page":1, "per_page":20} );
 		let responseJson  	= await response.json();
 		this.setState({ commits: responseJson });

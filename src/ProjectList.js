@@ -18,7 +18,7 @@ class ProjectList extends Component
 
 	async getProjects(username)
 	{
-		var uri 			= 'https://api.github.com/search/repositories?q=user:'+username+'&sort=stars&order=desc&client_id=20eb65ae4aacca8a9262&client_secret=b191d329132554efb055148f0b9c0c0814fbdeb9';
+		var uri 			= 'https://api.github.com/search/repositories?q=user:'+username+'&sort=stars&order=desc';
 		let response   		= await fetch(uri);
 		let responseJson  	= await response.json();
 		this.setState({ items: responseJson.items });
