@@ -1,0 +1,105 @@
+/*
+ * Created by Willianson Araújo
+ * 2016-09-07
+ */
+
+
+
+/* common
+--------------------------------------------------------------------------*/
+* 							{ zoom:1; }
+html, body 					{ height:100%; font-family:'Roboto'; background-color:#E5E5E5; }
+h1 							{ margin-top:0; padding-top:0; font-size:200%; font-weight:300; }
+p 							{ font-size:90%; font-weight:400; color:#666; }
+.m15						{ margin:15px; }
+.p15						{ padding:15px; }
+#root 						,
+#root .App 					{ height:100%; }
+#root .App main 			{ position:relative; top:64px; height:calc(100% - 64px); overflow:auto; }
+#root .App main::after 		{ content:''; clear:both; }
+.txt-overflow 				{ text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+::-webkit-scrollbar 		{ width:8px; }
+::-webkit-scrollbar-thumb 	{ border:1px solid #FFF; background:rgba(0,0,0,0.2); }
+
+
+
+/* flex
+--------------------------------------------------------------------------*/
+.flex 					{ display:-webkit-box; display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex; }
+/*.flex::after 			{ content:''; clear:both; }*/
+.flex-row 				{ flex-direction:row; }
+.flex-column 			{ flex-direction:column; }
+.flex-start				{ justify-content:flex-start; }
+.flex-end 				{ justify-content:flex-end; }
+.flex-center 			{ justify-content:center; }
+.flex-space-between 	{ justify-content:space-between; }
+.flex-space-around 		{ justify-content:space-around; }
+.flex-align-start 		{ align-items:flex-start; }
+.flex-align-end 		{ align-items:flex-end; }
+.flex-align-center 		{ align-items:center; }
+.flex-align-baseline 	{ align-items:baseline; }
+.flex-align-stretch 	{ align-items:stretch; }
+.flex-1 				{ flex-shrink:1; }
+.flex-2 				{ flex-shrink:2; }
+.flex-3 				{ flex-shrink:3; }
+.flex-4 				{ flex-shrink:4; }
+.flex-5 				{ flex-shrink:5; }
+.flex-6 				{ flex-shrink:6; }
+.flex-7 				{ flex-shrink:7; }
+.flex-8 				{ flex-shrink:8; }
+.flex-9 				{ flex-shrink:9; }
+
+
+
+/* ProjectList
+--------------------------------------------------------------------------*/
+.project-list 				{  }
+.project-list .list			{ position:absolute; top:62px; right:0; bottom:0; left:0; padding:0; overflow:auto; }
+.project-list .list-item	{ border-top:1px solid #EEE !important; }
+.project-list h1  			{ line-height:62px; padding:0 15px; font-size:120%; font-weight:400; color:#0068AE; text-decoration:none; background-color:#FFF; }
+.project-list a  			{ color:#0068AE; text-decoration:none; }
+.project-list a svg 		{ vertical-align:sub; }
+.project-list a .stars 		{ opacity:0.3; display:inline-block; margin-right:8px; }
+
+
+
+/* AppBar
+--------------------------------------------------------------------------*/
+.AppBar 					{ position:fixed !important; background-color:#0068AE !important; }
+.AppBar h1					{ font-size:130% !important; font-weight:400 !important; }
+
+
+
+/* Paper
+--------------------------------------------------------------------------*/
+.Paper 						{ margin:15px auto; padding:15px; width:90%; max-width:600px; }
+.Paper h1 					{ font-size:130%; }
+
+
+
+/* Home
+--------------------------------------------------------------------------*/
+.home 						{  }
+.home h1 					{  }
+.home p 					{ width:60%; color:#666; text-align:center; }
+
+
+
+/* Details
+---------------------------------------------------------------------------------------*/
+.details 									{ background:transparent; box-shadow:none; }
+.details   									{  }
+.details .item 								{ margin:0 auto 25px; max-width:200px; text-align:center; }
+.details .item .material-icons				{ opacity:0.6; font-size:300%; }
+.details .item strong						{ font-size:200%; }
+.details .commits 							{  }
+.details .commits article					{ margin:0 0 15px; border-bottom:1px dashed #E5E5E5; }
+.details .commits article:last-of-type		{ border-bottom:0; }
+.details .commits article::after 			{ content:''; clear:both; }
+.details .commits article .sha				{ width:20%; }
+.details .commits article .sha strong		{ display:block; -ms-text-overflow:ellipsis; text-overflow:ellipsis; overflow:hidden; }
+.details .commits article .info 			{ margin-left:5%; max-width:80%; overflow:hidden; }
+.details .commits article .info .message	{ margin:0; padding:0; }
+.details .commits article .info .author		{ opacity:0.5; display:block; margin-top:5px; }
+.details .see-more							{ position:relative; top:-10px; text-align:center; }
+
